@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2016.11-git-00479-g513a6a5 Configuration
+# Buildroot 2016.11-git-00480-g1054228 Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_6=y
@@ -73,7 +73,6 @@ BR2_cortex_a7=y
 # BR2_iwmmxt is not set
 # BR2_ARM_EABI is not set
 BR2_ARM_EABIHF=y
-# BR2_ARM_SOFT_FLOAT is not set
 # BR2_ARM_FPU_VFPV2 is not set
 # BR2_ARM_FPU_VFPV3 is not set
 # BR2_ARM_FPU_VFPV3D16 is not set
@@ -82,39 +81,7 @@ BR2_ARM_FPU_VFPV4D16=y
 # BR2_ARM_FPU_NEON is not set
 # BR2_ARM_FPU_NEON_VFPV4 is not set
 BR2_ARM_INSTRUCTIONS_ARM=y
-# BR2_ARM_INSTRUCTIONS_THUMB is not set
 # BR2_ARM_INSTRUCTIONS_THUMB2 is not set
-# BR2_x86_i486 is not set
-# BR2_x86_i586 is not set
-# BR2_x86_x1000 is not set
-# BR2_x86_i686 is not set
-# BR2_x86_pentiumpro is not set
-# BR2_x86_pentium_mmx is not set
-# BR2_x86_pentium_m is not set
-# BR2_x86_pentium2 is not set
-# BR2_x86_pentium3 is not set
-# BR2_x86_pentium4 is not set
-# BR2_x86_prescott is not set
-# BR2_x86_nocona is not set
-# BR2_x86_core2 is not set
-# BR2_x86_corei7 is not set
-# BR2_x86_corei7_avx is not set
-# BR2_x86_core_avx2 is not set
-# BR2_x86_atom is not set
-# BR2_x86_k6 is not set
-# BR2_x86_k6_2 is not set
-# BR2_x86_athlon is not set
-# BR2_x86_athlon_4 is not set
-# BR2_x86_opteron is not set
-# BR2_x86_opteron_sse3 is not set
-# BR2_x86_barcelona is not set
-# BR2_x86_jaguar is not set
-# BR2_x86_steamroller is not set
-# BR2_x86_geode is not set
-# BR2_x86_c3 is not set
-# BR2_x86_c32 is not set
-# BR2_x86_winchip_c6 is not set
-# BR2_x86_winchip2 is not set
 
 #
 # Build options
@@ -500,7 +467,7 @@ BR2_PACKAGE_MPLAYER_ARCH_SUPPORTS=y
 #
 # Compressors and decompressors
 #
-# BR2_PACKAGE_BZIP2 is not set
+BR2_PACKAGE_BZIP2=y
 # BR2_PACKAGE_LZ4 is not set
 
 #
@@ -601,6 +568,7 @@ BR2_PACKAGE_OPROFILE_ARCH_SUPPORTS=y
 #
 # BR2_PACKAGE_BINUTILS is not set
 # BR2_PACKAGE_BSDIFF is not set
+# BR2_PACKAGE_BUSTLE is not set
 # BR2_PACKAGE_CHECK is not set
 BR2_PACKAGE_CMAKE_ARCH_SUPPORTS=y
 
@@ -860,7 +828,14 @@ BR2_PACKAGE_QT5_JSCORE_AVAILABLE=y
 # BR2_PACKAGE_CDRKIT is not set
 # BR2_PACKAGE_CRYPTSETUP is not set
 # BR2_PACKAGE_CWIID is not set
-# BR2_PACKAGE_DBUS is not set
+BR2_PACKAGE_DBUS=y
+
+#
+# dbus-c++ needs a uClibc or glibc toolchain w/ C++, threads
+#
+# BR2_PACKAGE_DBUS_GLIB is not set
+# BR2_PACKAGE_DBUS_PYTHON is not set
+# BR2_PACKAGE_DBUS_TRIGGERD is not set
 # BR2_PACKAGE_DMRAID is not set
 # BR2_PACKAGE_DTV_SCAN_TABLES is not set
 # BR2_PACKAGE_DVB_APPS is not set
@@ -1543,7 +1518,7 @@ BR2_PACKAGE_MONGODB_ARCH_SUPPORTS=y
 # exiv2 needs a toolchain w/ C++, wchar, dynamic library
 #
 # BR2_PACKAGE_FONTCONFIG is not set
-# BR2_PACKAGE_FREETYPE is not set
+BR2_PACKAGE_FREETYPE=y
 # BR2_PACKAGE_GD is not set
 # BR2_PACKAGE_GDK_PIXBUF is not set
 # BR2_PACKAGE_GIFLIB is not set
@@ -1566,7 +1541,11 @@ BR2_PACKAGE_MONGODB_ARCH_SUPPORTS=y
 # BR2_PACKAGE_IJS is not set
 # BR2_PACKAGE_IMLIB2 is not set
 # BR2_PACKAGE_JASPER is not set
-# BR2_PACKAGE_JPEG is not set
+BR2_PACKAGE_JPEG=y
+# BR2_PACKAGE_LIBJPEG is not set
+BR2_PACKAGE_JPEG_TURBO=y
+BR2_PACKAGE_HAS_JPEG=y
+BR2_PACKAGE_PROVIDES_JPEG="jpeg-turbo"
 
 #
 # kms++ needs a toolchain w/ threads, C++, gcc >= 4.8, headers >= 3.8
@@ -1615,7 +1594,7 @@ BR2_PACKAGE_MONGODB_ARCH_SUPPORTS=y
 # libgtk3 needs an OpenGL or an OpenGL-EGL/wayland backend
 #
 # BR2_PACKAGE_LIBMNG is not set
-# BR2_PACKAGE_LIBPNG is not set
+BR2_PACKAGE_LIBPNG=y
 # BR2_PACKAGE_LIBQRENCODE is not set
 
 #
@@ -1782,7 +1761,7 @@ BR2_PACKAGE_LIBAIO_ARCH_SUPPORTS=y
 # benejson needs a toolchain w/ C++
 #
 # BR2_PACKAGE_CJSON is not set
-# BR2_PACKAGE_EXPAT is not set
+BR2_PACKAGE_EXPAT=y
 # BR2_PACKAGE_EZXML is not set
 # BR2_PACKAGE_JANSSON is not set
 # BR2_PACKAGE_JSON_C is not set
@@ -2010,7 +1989,8 @@ BR2_PACKAGE_CANFESTIVAL_ARCH_SUPPORTS=y
 # BR2_PACKAGE_LIBNFNETLINK is not set
 # BR2_PACKAGE_LIBNFTNL is not set
 # BR2_PACKAGE_LIBNICE is not set
-# BR2_PACKAGE_LIBNL is not set
+BR2_PACKAGE_LIBNL=y
+# BR2_PACKAGE_LIBNL_TOOLS is not set
 # BR2_PACKAGE_LIBOAUTH is not set
 # BR2_PACKAGE_LIBOPING is not set
 # BR2_PACKAGE_LIBOSIP2 is not set
@@ -2640,7 +2620,19 @@ BR2_PACKAGE_OPENSSH=y
 # BR2_PACKAGE_WIRELESS_REGDB is not set
 # BR2_PACKAGE_WIRELESS_TOOLS is not set
 # BR2_PACKAGE_WIRESHARK is not set
-# BR2_PACKAGE_WPA_SUPPLICANT is not set
+BR2_PACKAGE_WPA_SUPPLICANT=y
+BR2_PACKAGE_WPA_SUPPLICANT_NL80211=y
+# BR2_PACKAGE_WPA_SUPPLICANT_AP_SUPPORT is not set
+# BR2_PACKAGE_WPA_SUPPLICANT_AUTOSCAN is not set
+# BR2_PACKAGE_WPA_SUPPLICANT_EAP is not set
+# BR2_PACKAGE_WPA_SUPPLICANT_HOTSPOT is not set
+# BR2_PACKAGE_WPA_SUPPLICANT_DEBUG_SYSLOG is not set
+# BR2_PACKAGE_WPA_SUPPLICANT_WPS is not set
+BR2_PACKAGE_WPA_SUPPLICANT_CLI=y
+BR2_PACKAGE_WPA_SUPPLICANT_WPA_CLIENT_SO=y
+BR2_PACKAGE_WPA_SUPPLICANT_PASSPHRASE=y
+# BR2_PACKAGE_WPA_SUPPLICANT_DBUS_OLD is not set
+# BR2_PACKAGE_WPA_SUPPLICANT_DBUS_NEW is not set
 # BR2_PACKAGE_WPAN_TOOLS is not set
 
 #
