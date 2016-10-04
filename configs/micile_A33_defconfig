@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2016.11-git Configuration
+# Buildroot 2016.11-git-00001-g1f6a2ad Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_6=y
@@ -850,7 +850,7 @@ BR2_PACKAGE_DBUS=y
 # eudev needs eudev /dev management
 #
 # BR2_PACKAGE_EVEMU is not set
-# BR2_PACKAGE_EVTEST is not set
+BR2_PACKAGE_EVTEST=y
 # BR2_PACKAGE_FAN_CTRL is not set
 # BR2_PACKAGE_FCONFIG is not set
 # BR2_PACKAGE_FIS is not set
