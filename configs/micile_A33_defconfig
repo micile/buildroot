@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot 2016.11-git-00004-g82aecf0 Configuration
+# Buildroot 2016.11-git-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_6=y
@@ -345,6 +345,7 @@ BR2_PACKAGE_SKELETON=y
 #
 # Audio and video applications
 #
+# BR2_PACKAGE_LIBUVC is not set
 BR2_PACKAGE_ALSA_UTILS=y
 # BR2_PACKAGE_ALSA_UTILS_ALSACONF is not set
 # BR2_PACKAGE_ALSA_UTILS_ACONNECT is not set
@@ -478,7 +479,7 @@ BR2_PACKAGE_MPLAYER_MPLAYER=y
 # BR2_PACKAGE_TSTOOLS is not set
 # BR2_PACKAGE_TWOLAME is not set
 # BR2_PACKAGE_UPMPDCLI is not set
-# BR2_PACKAGE_V4L2GRAB is not set
+BR2_PACKAGE_V4L2GRAB=y
 # BR2_PACKAGE_VLC is not set
 # BR2_PACKAGE_VORBIS_TOOLS is not set
 # BR2_PACKAGE_WAVPACK is not set
@@ -1114,7 +1115,7 @@ BR2_PACKAGE_PYTHON_PYCRYPTO=y
 #
 # python-pyudev needs udev /dev management
 #
-# BR2_PACKAGE_PYTHON_PYUSB is not set
+BR2_PACKAGE_PYTHON_PYUSB=y
 # BR2_PACKAGE_PYTHON_PYXB is not set
 # BR2_PACKAGE_PYTHON_PYYAML is not set
 # BR2_PACKAGE_PYTHON_PYZMQ is not set
@@ -1541,9 +1542,11 @@ BR2_PACKAGE_LIBAIO_ARCH_SUPPORTS=y
 # libsigrokdecode is not compatible with python
 #
 # BR2_PACKAGE_LIBSOC is not set
-# BR2_PACKAGE_LIBUSB is not set
+BR2_PACKAGE_LIBUSB=y
+BR2_PACKAGE_LIBUSB_COMPAT=y
 # BR2_PACKAGE_LIBUSBGX is not set
-# BR2_PACKAGE_LIBV4L is not set
+BR2_PACKAGE_LIBV4L=y
+BR2_PACKAGE_LIBV4L_UTILS=y
 # BR2_PACKAGE_LIBXKBCOMMON is not set
 # BR2_PACKAGE_MRAA is not set
 # BR2_PACKAGE_MTDEV is not set
